@@ -1,0 +1,91 @@
+[  
+    {
+    "type": 1,
+    "title": "Debian shell",
+    "command": "/bin/bash -c 'docker-compose -p shell up -d shell && exit'",
+    "interactive": true,
+    "description": "Run Debian shell container",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GNOME_Terminal_icon_2019.svg/1200px-GNOME_Terminal_icon_2019.svg.png",
+    "platform": "linux",
+    "restart_policy": "no",
+    "categories": ["Toradex images"],
+    "image": "template",
+    "volumes": [
+         {
+           "container": "/var/run/docker.sock",
+           "bind": "/var/run/docker.sock"
+         }
+               ]
+    },
+    {
+    "type": 1,
+    "title": "Developer tools",
+    "command": "/bin/bash -c 'docker-compose -p dev-tools up -d developer-tools && exit'",
+    "interactive": true,
+    "description": "Run developer tools container",
+    "platform": "linux",
+    "restart_policy": "no",
+    "categories": ["Toradex images"],
+    "image": "template",
+    "volumes": [
+         {
+           "container": "/var/run/docker.sock",
+           "bind": "/var/run/docker.sock"
+         }
+               ]
+     },
+     {
+    "type": 1,
+    "title": "Chromium",
+    "command": "/bin/bash -c 'docker-compose -p chromium up -d chromium && exit'",
+    "interactive": true,
+    "description": "Run Chromium container",
+    "logo": "https://www.chromium.org/_/rsrc/1438879449147/config/customLogo.gif?revision=3",
+    "platform": "linux",
+    "restart_policy": "no",
+    "categories": ["Toradex images"],
+    "image": "template",
+    "volumes": [
+         {
+           "container": "/var/run/docker.sock",
+           "bind": "/var/run/docker.sock"
+         }
+               ]
+     },
+     {
+    "type": 1,
+    "title": "Codesys",
+    "command": "/bin/bash -c 'docker-compose -p codesys up -d codesys kiosk-codesys && exit'",
+    "interactive": true,
+    "description": "Run Codesys container",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Codesys_Logo.svg/1280px-Codesys_Logo.svg.png",
+    "platform": "linux",
+    "restart_policy": "no",
+    "categories": ["Partner images"],
+    "image": "template",
+    "volumes": [
+         {
+           "container": "/var/run/docker.sock",
+           "bind": "/var/run/docker.sock"
+         }
+               ]
+     },
+     {
+    "type": 1,
+    "title": "Crank",
+    "command": "/bin/bash -c 'docker-compose -p crank up -d crank && exit'",
+    "interactive": true,
+    "description": "Run Crank container",
+    "logo": "https://pbs.twimg.com/profile_images/1119027705444540416/wNoG5h6v_400x400.png",
+    "platform": "linux",
+    "restart_policy": "no",
+    "categories": ["Partner images"],
+    "image": "template",
+    "volumes": [
+         {
+           "container": "/var/run/docker.sock",
+           "bind": "/var/run/docker.sock"
+         }
+               ]
+     }
+]
