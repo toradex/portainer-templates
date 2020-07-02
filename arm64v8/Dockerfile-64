@@ -1,3 +1,0 @@
-FROM torizon/arm64v8-debian-docker-compose:buster
-
-COPY docker-compose-arm64v8.yml /docker-compose.yml
