@@ -1,20 +1,6 @@
 version: "2.4"
 services:
 
-  kiosk:
-    image: torizon/arm64v8-debian-kiosk-mode-browser:latest
-    network_mode: host
-    security_opt:
-      - seccomp:unconfined
-    command: --window-mode http://portainer:9000
-    volumes:
-      - type: bind
-        source: /tmp
-        target: /tmp
-      - type: bind
-        source: /var/run/dbus
-        target: /var/run/dbus
-
   chromium:
     image: torizon/arm64v8-debian-kiosk-mode-browser:latest
     security_opt:
