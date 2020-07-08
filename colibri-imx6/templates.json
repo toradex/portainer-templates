@@ -1,94 +1,134 @@
-  [  
+[
     {
     "type": 1,
     "title": "Debian shell",
-    "command": "/bin/bash -c 'curl -L -o docker-compose.yml https://feeds.toradex.com/portainer/colibri-imx6/docker-compose.yml && docker-compose -p shell up -d shell && exit'",
-    "interactive": true,
     "description": "Run Debian shell container",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GNOME_Terminal_icon_2019.svg/1200px-GNOME_Terminal_icon_2019.svg.png",
-    "platform": "linux",
+    "image": "torizon/arm32v7-debian-shell",
+    "command": "/bin/bash",
+    "platform": "linux", 
+    "interactive": true,
     "restart_policy": "no",
-    "note": "<b> Image size is ~70MB. It may take some time to pull on the first-use. </b>",
-    "categories": ["Toradex images"],
-    "image": "torizon/arm32v7-debian-docker-compose",
-    "volumes": [
-        {
-          "container": "/var/run/docker.sock",
-          "bind": "/var/run/docker.sock"
-        }
-              ]
+    "categories": ["Toradex images"]
     },
     {
     "type": 1,
-    "title": "Developer tools",
-    "command": "/bin/bash -c 'curl -L -o docker-compose.yml https://feeds.toradex.com/portainer/colibri-imx6/docker-compose.yml && docker-compose -p dev-tools up -d developer-tools && exit'",
-    "interactive": true,
-    "description": "Run developer tools container",
+    "title": "Developer Tools Container",
+    "description": "Run developer tools container for TorizonCore",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GNOME_Terminal_icon_2019.svg/1200px-GNOME_Terminal_icon_2019.svg.png",
+    "image": "torizon/arm32v7-debian-dev-tools:latest",
     "platform": "linux",
-    "restart_policy": "no",
+    "interactive": true,
+    "privileged": true,
     "categories": ["Toradex images"],
-    "image": "torizon/arm32v7-debian-docker-compose",
     "volumes": [
-        {
-          "container": "/var/run/docker.sock",
-          "bind": "/var/run/docker.sock"
-        }
-              ]
+         {
+           "container": "/dev",
+           "bind": "/dev"
+	 },
+	 {
+           "container": "/boot",
+           "bind": "/boot"
+         }
+    ]
     },
     {
     "type": 1,
     "title": "Chromium",
-    "command": "/bin/bash -c 'curl -L -o docker-compose.yml https://feeds.toradex.com/portainer/colibri-imx6/docker-compose.yml && docker-compose -p chromium up -d chromium && exit'",
-    "interactive": true,
     "description": "Run Chromium container",
-    "logo": "https://www.chromium.org/_/rsrc/1438879449147/config/customLogo.gif?revision=3",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Chromium_11_Logo.svg",
+    "image": "torizon/arm32v7-debian-kiosk-mode-browser:latest",
     "platform": "linux",
+    "interactive": true,
     "restart_policy": "no",
+    "privileged": true,
     "categories": ["Toradex images"],
-    "image": "torizon/arm32v7-debian-docker-compose",
+    "command": "--browser-mode https://www.google.com",
     "volumes": [
-        {
-          "container": "/var/run/docker.sock",
-          "bind": "/var/run/docker.sock"
-        }
-              ]
-    },
+         {
+           "container": "/tmp",
+           "bind": "/tmp"
+         },
+         {
+           "container": "/var/run/dbus",
+           "bind": "/var/run/dbus"
+         },
+         {
+           "container": "/dev/dri",
+           "bind": "/dev/dri"
+         }
+    ]
+    },    
     {
     "type": 1,
-    "title": "Codesys",
-    "command": "/bin/bash -c 'curl -L -o docker-compose.yml https://feeds.toradex.com/portainer/colibri-imx6/docker-compose.yml && docker-compose -p codesys up -d codesys kiosk-codesys && exit'",
-    "interactive": true,
-    "description": "Run Codesys container",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Codesys_Logo.svg/1280px-Codesys_Logo.svg.png",
+    "title": "Qt5 application",
+    "description": "Run Qt5 demo application",
+    "logo": "https://sdtimes.com/wp-content/uploads/2016/09/0927.sdt-qt.png",
+    "image": "torizon/arm32v7-debian-qt5-wayland-examples:buster",
     "platform": "linux",
+    "interactive": true,
     "restart_policy": "no",
-    "note": "<b> Image size is ~70MB. It may take some time to pull on the first-use. </b>",
-    "categories": ["Partner images"],
-    "image": "torizon/arm32v7-debian-docker-compose",
+    "privileged": true,
+    "categories": ["Toradex images"],
+    "command": "/usr/lib/arm-linux-gnueabihf/qt5/examples/opengl/cube/cube",
     "volumes": [
-        {
-          "container": "/var/run/docker.sock",
-          "bind": "/var/run/docker.sock"
-        }
-              ]
-    },
+         {
+           "container": "/tmp",
+           "bind": "/tmp"
+         },
+         {
+           "container": "/dev/dri",
+           "bind": "/dev/dri"
+         }
+    ]
+    },    
     {
     "type": 1,
     "title": "Crank",
-    "command": "/bin/bash -c 'curl -L -o docker-compose.yml https://feeds.toradex.com/portainer/colibri-imx6/docker-compose.yml && docker-compose -p crank up -d crank && exit'",
-    "interactive": true,
     "description": "Run Crank container",
     "logo": "https://pbs.twimg.com/profile_images/1119027705444540416/wNoG5h6v_400x400.png",
+    "image": "cranksoftware/torizon_imx6:6_1",
     "platform": "linux",
+    "interactive": true,
     "restart_policy": "no",
-    "note": "<b> Image size is ~200MB. It may take some time to pull on the first-use. </b>",
+    "privileged": true,    
     "categories": ["Partner images"],
-    "image": "torizon/arm32v7-debian-docker-compose",
     "volumes": [
-        {
-          "container": "/var/run/docker.sock",
-          "bind": "/var/run/docker.sock"
-        }
-              ]
+         {
+           "container": "/dev",
+           "bind": "/dev"
+	 },
+	 {
+           "container": "/tmp",
+           "bind": "/tmp"
+         }
+    ]
+    },
+    {
+    "type": 3,
+    "title": "Codesys",
+    "description": "Run Codesys container",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Codesys_Logo.svg/1280px-Codesys_Logo.svg.png",
+    "platform": "linux",
+    "name": "codesys",    
+    "categories": ["Partner images"],
+    "repository": {
+      "url": "https://github.com/toradex/portainer-templates",
+      "stackfile": "arm32v7/docker-compose-codesys.yml"
+                  }
+    },
+    {
+    "type": 3,
+    "title": "Node-RED",
+    "description": "Run Node-RED container",
+    "logo": "https://nodered.org/about/resources/media/node-red-icon.png",    
+    "platform": "linux",
+    "name": "node-red",    
+    "categories": ["Partner images"],
+    "repository": {
+      "url": "https://github.com/toradex/portainer-templates",
+      "stackfile": "arm32v7/docker-compose-nodered.yml"
+                  }
     }
-  ]
+
+]
