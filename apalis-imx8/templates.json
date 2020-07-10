@@ -64,7 +64,7 @@
     "title": "Qt5 application",
     "description": "Run Qt5 demo application",
     "logo": "https://sdtimes.com/wp-content/uploads/2016/09/0927.sdt-qt.png",
-    "image": "torizon/arm64v8-debian-qt5-wayland-examples:buster",
+    "image": "torizon/arm64v8-debian-qt5-wayland-examples-vivante:buster",
     "platform": "linux",
     "interactive": true,
     "restart_policy": "no",
@@ -76,11 +76,21 @@
            "container": "/tmp",
            "bind": "/tmp"
          },
+	 {
+	   "container": "/dev/galcore",
+	   "bind": "/dev/galcore"
+	 },  
          {
            "container": "/dev/dri",
            "bind": "/dev/dri"
          }
-    ]
+    ],
+    "env": [
+         {
+           "name": "ACCEPT_FSL_EULA",
+           "set": "1"
+         }
+    ]		  
     },    
     {
     "type": 1,
@@ -103,19 +113,6 @@
            "bind": "/tmp"
          }
     ]
-    },
-    {
-    "type": 3,
-    "title": "Codesys",
-    "description": "Run Codesys container",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Codesys_Logo.svg/1280px-Codesys_Logo.svg.png",
-    "platform": "linux",
-    "name": "codesys",    
-    "categories": ["Partner images"],
-    "repository": {
-      "url": "https://github.com/toradex/portainer-templates",
-      "stackfile": "arm64v8/docker-compose-codesys.yml"
-                  }
     },
     {
     "type": 3,

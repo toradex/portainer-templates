@@ -106,19 +106,6 @@
     },
     {
     "type": 3,
-    "title": "Codesys",
-    "description": "Run Codesys container",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Codesys_Logo.svg/1280px-Codesys_Logo.svg.png",
-    "platform": "linux",
-    "name": "codesys",    
-    "categories": ["Partner images"],
-    "repository": {
-      "url": "https://github.com/toradex/portainer-templates",
-      "stackfile": "arm32v7/docker-compose-codesys.yml"
-                  }
-    },
-    {
-    "type": 3,
     "title": "Node-RED",
     "description": "Run Node-RED container",
     "logo": "https://nodered.org/about/resources/media/node-red-icon.png",    
