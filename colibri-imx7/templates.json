@@ -76,6 +76,19 @@
            "bind": "/tmp"
          }
     ]
-    }
+    },
+    {
+    "type": 1,
+    "title": "Node-RED",
+    "description": "Run Node-RED container",
+    "logo": "https://nodered.org/about/resources/media/node-red-icon.png",    
+    "image": "nodered/node-red:1.0.6-2",
+    "note": "WARNING: This will only start a web interface. To access it, open a web-browser and run http://&lt;Board&#39;s Ethernet IP&gt;:1880",
+    "ports": ["1880:1880/tcp"],    
+    "platform": "linux",
+    "interactive": true,
+    "restart_policy": "no",    
+    "categories": ["Partner images"]
+    }    
 
 ]
