@@ -4,40 +4,19 @@
     "title": "Debian shell",
     "description": "Run Debian shell container",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GNOME_Terminal_icon_2019.svg/1200px-GNOME_Terminal_icon_2019.svg.png",
-    "image": "torizon/debian-shell:1",
+    "image": "torizon/debian-shell:2",
     "command": "/bin/bash",
-    "platform": "linux", 
+    "platform": "linux",
     "interactive": true,
     "restart_policy": "no",
     "categories": ["Toradex images"]
     },
     {
     "type": 1,
-    "title": "Developer Tools Container",
-    "description": "Run developer tools container for TorizonCore",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GNOME_Terminal_icon_2019.svg/1200px-GNOME_Terminal_icon_2019.svg.png",
-    "image": "torizon/dev-tools:1",
-    "platform": "linux",
-    "interactive": true,
-    "privileged": true,
-    "categories": ["Toradex images"],
-    "volumes": [
-         {
-           "container": "/dev",
-           "bind": "/dev"
-	 },
-	 {
-           "container": "/boot",
-           "bind": "/boot"
-         }
-    ]
-    },
-    {
-    "type": 1,
     "title": "Chromium",
     "description": "Run Chromium container",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Chromium_11_Logo.svg",
-    "image": "torizon/kiosk-mode-browser:1",
+    "image": "torizon/kiosk-mode-browser:2",
     "platform": "linux",
     "interactive": true,
     "restart_policy": "no",
@@ -58,13 +37,13 @@
            "bind": "/dev/dri"
          }
     ]
-    },    
+    },
     {
     "type": 1,
     "title": "Qt5 application",
     "description": "Run Qt5 demo application",
     "logo": "https://sdtimes.com/wp-content/uploads/2016/09/0927.sdt-qt.png",
-    "image": "torizon/qt5-wayland-examples:1",
+    "image": "torizon/qt5-wayland-examples:2",
     "platform": "linux",
     "interactive": true,
     "restart_policy": "no",
@@ -81,7 +60,7 @@
            "bind": "/dev/dri"
          }
     ]
-    },    
+    },
     {
     "type": 1,
     "title": "Crank",
@@ -91,7 +70,7 @@
     "platform": "linux",
     "interactive": true,
     "restart_policy": "no",
-    "privileged": true,    
+    "privileged": true,
     "categories": ["Partner images"],
     "volumes": [
          {
@@ -105,17 +84,17 @@
     ]
     },
     {
-    "type": 3,
-    "title": "Node-RED",
-    "description": "Run Node-RED container",
-    "logo": "https://nodered.org/about/resources/media/node-red-icon.png",    
-    "platform": "linux",
-    "name": "node-red",    
-    "categories": ["Partner images"],
-    "repository": {
-      "url": "https://github.com/toradex/portainer-templates",
-      "stackfile": "arm32v7/docker-compose-nodered.yml"
-                  }
-    }
+      "type": 1,
+      "title": "Node-RED",
+      "description": "Run Node-RED container",
+      "logo": "https://nodered.org/about/resources/media/node-red-icon.png",
+      "image": "nodered/node-red:1.0.6-2",
+      "note": "NOTE: This will only start a web interface. To access it, open a web-browser and run http://&lt;Board&#39;s Ethernet IP&gt;:1880",
+      "ports": ["1880:1880/tcp"],
+      "platform": "linux",
+      "interactive": true,
+      "restart_policy": "no",
+      "categories": ["Partner images"]
+      }
 
 ]
