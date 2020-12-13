@@ -5,21 +5,34 @@
             "categories": [
                 "Toradex images"
             ],
-            "command": "/bin/bash",
-            "description": "Run Debian shell container",
-            "image": "torizon/debian-shell:2",
+            "command": "weston-terminal",
+            "name": "weston-terminal",
+            "description": "Run Weston-terminal",
+            "image": "torizon/weston:2",
             "interactive": true,
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GNOME_Terminal_icon_2019.svg/1200px-GNOME_Terminal_icon_2019.svg.png",
             "platform": "linux",
+            "privileged": true,
             "restart_policy": "no",
-            "title": "Debian shell",
-            "type": 1
+            "title": "Weston-terminal",
+            "type": 1,
+            "volumes": [
+                {
+                    "bind": "/tmp",
+                    "container": "/tmp"
+                },
+                {
+                    "bind": "/dev/dri",
+                    "container": "/dev/dri"
+                }
+            ]
         },
         {
             "categories": [
                 "Toradex images"
             ],
             "command": "/usr/lib/arm-linux-gnueabihf/qt5/examples/opengl/cube/cube",
+            "name": "qt5-app",
             "description": "Run Qt5 demo application",
             "image": "torizon/qt5-wayland-examples:2",
             "interactive": true,
@@ -44,6 +57,7 @@
             "categories": [
                 "Partner images"
             ],
+            "name": "crank",
             "description": "Run Crank container",
             "image": "cranksoftware/torizon_imx6:6_1",
             "interactive": true,
@@ -68,6 +82,7 @@
             "categories": [
                 "Partner images"
             ],
+            "name": "node-red",
             "description": "Run Node-RED container",
             "image": "nodered/node-red:1.0.6-2",
             "interactive": true,
