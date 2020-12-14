@@ -11,6 +11,7 @@
             "image": "torizon/weston:2",
             "interactive": true,
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GNOME_Terminal_icon_2019.svg/1200px-GNOME_Terminal_icon_2019.svg.png",
+            "note": "This simple example helps you to get started with Toradex containers and illustrates how to run graphical applications - the weston-terminal, for instance - that are compatible with the Wayland/Weston graphics stack. Learn more on <a href=https://developer.toradex.com/knowledge-base/debian-container-for-torizon>https://developer.toradex.com/knowledge-base/debian-container-for-torizon</a>.",
             "platform": "linux",
             "privileged": true,
             "restart_policy": "no",
@@ -37,6 +38,7 @@
             "image": "torizon/qt5-wayland-examples:2",
             "interactive": true,
             "logo": "https://sdtimes.com/wp-content/uploads/2016/09/0927.sdt-qt.png",
+            "note": "This simple 3D demonstration using Qt5 is ideal to get you started into developing Qt apps with Torizon. Start with <a href=https://developer.toradex.com/knowledge-base/qt-debian-container-for-torizon>https://developer.toradex.com/knowledge-base/qt-debian-container-for-torizon</a>, then learn how to develop your application on <a href=https://developer.toradex.com/knowledge-base/qt-c-application-development-using-visual-studio-code-and-torizon>https://developer.toradex.com/knowledge-base/qt-c-application-development-using-visual-studio-code-and-torizon</a> and <a href=https://developer.toradex.com/knowledge-base/torizoncore-qt-python>https://developer.toradex.com/knowledge-base/torizoncore-qt-python</a>.",
             "platform": "linux",
             "privileged": true,
             "restart_policy": "no",
@@ -62,6 +64,7 @@
             "image": "cranksoftware/torizon_imx6:6_1",
             "interactive": true,
             "logo": "https://pbs.twimg.com/profile_images/1119027705444540416/wNoG5h6v_400x400.png",
+            "note": "Creating Graphical User Interfaces is made easy with Crank Storyboard. Learn how to deploy your own application with this Partner Demo Container on <a href=https://developer.toradex.com/knowledge-base/partner-demo-container-crank-storyboard>https://developer.toradex.com/knowledge-base/partner-demo-container-crank-storyboard</a>.",
             "platform": "linux",
             "privileged": true,
             "restart_policy": "no",
@@ -87,7 +90,7 @@
             "image": "nodered/node-red:1.0.6-2",
             "interactive": true,
             "logo": "https://nodered.org/about/resources/media/node-red-icon.png",
-            "note": "NOTE: This will only start a web interface. To access it, open a web-browser and run http://\u0026lt;Board\u0026#39;s Ethernet IP\u0026gt;:1880",
+            "note": "<p>Node-RED is a programming tool that allows you to do block-based coding on a web interface. Learn more on <a href=https://developer.toradex.com/knowledge-base/node-red>https://developer.toradex.com/knowledge-base/node-red.</a></p> <p><b>NOTE</b>: This will only start a web interface. To access it, open a web-browser and run http://\u0026lt;Board\u0026#39;s Ethernet IP\u0026gt;:1880.</p>",
             "platform": "linux",
             "ports": [
                 "1880:1880/tcp"
