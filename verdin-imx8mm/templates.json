@@ -109,7 +109,7 @@
             "image": "cranksoftware/torizon_imx6:6_1",
             "interactive": true,
             "logo": "https://pbs.twimg.com/profile_images/1119027705444540416/wNoG5h6v_400x400.png",
-            "note": "Creating Graphical User Interfaces is made easy with Crank Storyboard. Learn how to deploy your own application with this Partner Demo Container on <a href=https://developer.toradex.com/knowledge-base/partner-demo-container-crank-storyboard>https://developer.toradex.com/knowledge-base/partner-demo-container-crank-storyboard</a>.",
+            "note": "Creating Graphical User Interfaces is made easy with Crank Storyboard. Learn how to deploy your own application with this Partner Demo Container on <a href=https://developer.toradex.com/knowledge-base/partner-demo-container-crank-storyboard>https://developer.toradex.com/knowledge-base/partner-demo-container-crank-storyboard</a>.<br>It is recommended to run this demo with an HDMI display, since it has a fixed resolution of 1280x720.",
             "platform": "linux",
             "privileged": true,
             "restart_policy": "no",
