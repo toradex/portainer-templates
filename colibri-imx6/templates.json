@@ -129,6 +129,33 @@
             "restart_policy": "no",
             "title": "Node-RED",
             "type": 1
+        },
+        {
+            "categories": [
+                "Partner images"
+            ],
+            "command": "bash /app/start.sh",
+            "name": "totalcross",
+            "description": "Run TotalCross container",
+            "image": "totalcross/torizon-demo:1.0.1",
+            "interactive": true,
+            "logo": "https://avatars1.githubusercontent.com/u/10406833",
+            "note": "TotalCross is an Open Source SDK for building beautiful User Interfaces with a low footprint and an easy-to-use GUI creator. This demonstration showcases how to deploy a TotalCross application into a Torizon container. Learn more by visiting our article <a href=https://developer.toradex.com/knowledge-base/partner-demo-container-totalcross>https://developer.toradex.com/knowledge-base/partner-demo-container-totalcross</a>.",
+            "platform": "linux",
+            "privileged": true,
+            "restart_policy": "no",
+            "title": "TotalCross",
+            "type": 1,
+            "volumes": [
+                {
+                    "bind": "/dev/dri",
+                    "container": "/dev/dri"
+                },
+                {
+                    "bind": "/tmp",
+                    "container": "/tmp"
+                }
+            ]
         }
     ]
 }
