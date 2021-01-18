@@ -32,7 +32,7 @@
             "categories": [
                 "Toradex images"
             ],
-            "command": "/usr/lib/arm-linux-gnueabihf/qt5/examples/opengl/cube/cube",
+            "command": "/usr/lib/arm-linux-gnueabihf/qt5/examples/quick/quickwidgets/quickwidget/quickwidget",
             "name": "qt5-app",
             "description": "Run Qt5 demo application",
             "image": "torizon/qt5-wayland-examples:2",
@@ -40,6 +40,12 @@
             "logo": "https://sdtimes.com/wp-content/uploads/2016/09/0927.sdt-qt.png",
             "note": "This simple 3D demonstration using Qt5 is ideal to get you started into developing Qt apps with Torizon. Start with <a href=https://developer.toradex.com/knowledge-base/qt-debian-container-for-torizon>https://developer.toradex.com/knowledge-base/qt-debian-container-for-torizon</a>, then learn how to develop your application on <a href=https://developer.toradex.com/knowledge-base/qt-c-application-development-using-visual-studio-code-and-torizon>https://developer.toradex.com/knowledge-base/qt-c-application-development-using-visual-studio-code-and-torizon</a> and <a href=https://developer.toradex.com/knowledge-base/torizoncore-qt-python>https://developer.toradex.com/knowledge-base/torizoncore-qt-python</a>.",
             "platform": "linux",
+            "env": [
+                {
+                  "name": "QMLSCENE_DEVICE",
+                  "default": "softwarecontext"
+                }
+              ],
             "privileged": true,
             "restart_policy": "no",
             "title": "Qt5 application",
