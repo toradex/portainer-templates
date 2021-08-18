@@ -17,6 +17,12 @@
             "restart_policy": "no",
             "title": "Weston-terminal",
             "type": 1,
+            "env": [
+                {
+                    "name": "IGNORE_VT_SWITCH_BACK",
+                    "set": "1"
+                }
+            ],
             "volumes": [
                 {
                     "bind": "/tmp",
