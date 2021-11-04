@@ -124,7 +124,7 @@
             ],
             "name": "crank",
             "description": "Run Crank container",
-            "image": "cranksoftware/torizon_imx8:6_2",
+            "image": "cranksoftware/torizon_imx8:7_0_1",
             "interactive": true,
             "logo": "https://docs.toradex.com/106842-crank-logo-table.png",
             "note": "Creating Graphical User Interfaces is made easy with Crank Storyboard. Learn how to deploy your own application with this Partner Demo Container on <a href=https://developer.toradex.com/knowledge-base/partner-demo-container-crank-storyboard>https://developer.toradex.com/knowledge-base/partner-demo-container-crank-storyboard</a>.<br>It is recommended to run this demo with an HDMI display, since it has a fixed resolution of 1280x720.",
