@@ -38,10 +38,10 @@
             "categories": [
                 "Toradex images"
             ],
-            "command": "$URL",
+            "command": "$WEBSITE_URL",
             "name": "Cog",
             "description": "Run Web application container",
-            "image": "torizon/kiosk-mode-browser:2",
+            "image": "torizon/cog:2",
             "interactive": true,
             "logo": "https://raw.githubusercontent.com/Igalia/cog/master/data/cog.png",
             "note": "By learning how to run a web browser, you are one step closer to deploying your Graphical User Interface (GUI) based on web technologies. Check out our example about running multiple containers, where we use a web browser to display a dashboard locally on the board's display <a href=https://developer.toradex.com/knowledge-base/multi-containers-torizon-core>https://developer.toradex.com/knowledge-base/multi-containers-torizon-core</a>.<br>This container starts in <a href=https://developer.toradex.com/knowledge-base/kiosk-mode-browser-with-torizon-core>kiosk mode</a>, to close it you must use the keyboard shortcut <b>Ctrl + W</b>",
@@ -52,11 +52,7 @@
             "type": 1,
             "env": [
                 {
-                    "name": "KIOSK_LAUNCHER",
-                    "set": "cog"
-                },
-                {
-                    "name": "URL",
+                    "name": "WEBSITE_URL",
                     "label": "Website URL",
                     "default": "https://www.toradex.com/",
                     "description": "Enter Website URL"
